@@ -46,9 +46,9 @@ def quick_sort_inplace(l, low, high):
         l[i+1],l[high] = l[high],l[i+1] 
         return i+1 
     if low < high: 
-        pivot = partition(l,low,high)  
-        quick_sort_inplace(l, low, pivot-1) 
-        quick_sort_inplace(l, pivot+1, high) 
+        pivot_idx = partition(l,low,high)  
+        quick_sort_inplace(l, low, pivot_idx-1) 
+        quick_sort_inplace(l, pivot_idx+1, high) 
 
 if __name__ == "__main__":
     unsorted_list [1,7,5,2,9,3,4,-5,10,15,25]
